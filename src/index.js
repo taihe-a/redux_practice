@@ -9,12 +9,6 @@ import { Provider } from "react-redux";
 
 const store = createStore(reducer);
 
-store.subscribe(() => {
-  console.log(store.getState());
-});
-
-store.dispatch({ type: "PLUS", payload: { num: 1 } });
-
 function Ap() {
   return (
     <Provider store={store}>
@@ -24,6 +18,5 @@ function Ap() {
     </Provider>
   );
 }
-
 const rootElement = document.getElementById("root");
 ReactDOM.render(<Ap />, rootElement);
